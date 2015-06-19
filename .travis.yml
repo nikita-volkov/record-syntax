@@ -30,13 +30,13 @@ install:
       constraint_options=(
       );
     fi;
+  # Install the "haskell-src-exts" implicit dependency
+  - cabal install happy ${constraint_options[@]}
   # Install the library dependencies
-  - cabal install --only-dependencies --reorder-goals --force-reinstalls
+  - travis_wait cabal install --only-dependencies --reorder-goals --force-reinstalls
       ${constraint_options[@]}
       $([ "$tests" = "1" ] && echo "--enable-tests")
       $([ "$benchmarks" = "1" ] && echo "--enable-benchmarks")
-  # Install the "haskell-src-exts" implicit dependency
-  - cabal install happy
   # Build the library
   - travis_wait cabal build
   # Configure and build the remaining stuff

@@ -23,8 +23,10 @@ main = do
         "-XDataKinds",
         "-XDefaultSignatures",
         "-XDeriveDataTypeable",
+        "-XDeriveFoldable",
         "-XDeriveFunctor",
         "-XDeriveGeneric",
+        "-XDeriveTraversable",
         "-XEmptyDataDecls",
         "-XFlexibleContexts",
         "-XFlexibleInstances",
@@ -34,6 +36,7 @@ main = do
         "-XImpredicativeTypes",
         "-XLambdaCase",
         "-XLiberalTypeSynonyms",
+        "-XMagicHash",
         "-XMultiParamTypeClasses",
         "-XMultiWayIf",
         "-XNoImplicitPrelude",
@@ -50,6 +53,7 @@ main = do
         "-XTupleSections",
         "-XTypeFamilies",
         "-XTypeOperators",
+        "-XUnboxedTuples",
         "-hide-all-packages"
       ]
 

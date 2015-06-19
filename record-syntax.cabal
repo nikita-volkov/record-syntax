@@ -68,7 +68,7 @@ library
     parsec >= 3.1.2 && < 4,
     -- 
     conversion == 1.*,
-    conversion-text == 1.*,
+    conversion-text >= 1.0.0.2 && < 2,
     text >= 1 && < 2,
     --
     template-haskell == 2.*,
