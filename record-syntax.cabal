@@ -1,7 +1,7 @@
 name:
   record-syntax
 version:
-  0.1.0.1
+  0.1.0.2
 synopsis:
   A library for parsing and processing the Haskell syntax sprinkled with anonymous records
 category:
@@ -65,7 +65,7 @@ library
     record == 0.4.*,
     -- 
     haskell-src-exts == 1.16.*,
-    parsec >= 3.1.2 && < 4,
+    parsec >= 3.1.9 && < 4,
     -- 
     conversion == 1.*,
     conversion-text >= 1.0.0.2 && < 2,
