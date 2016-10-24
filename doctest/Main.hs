@@ -33,7 +33,6 @@ main = do
         "-XFunctionalDependencies",
         "-XGADTs",
         "-XGeneralizedNewtypeDeriving",
-        "-XImpredicativeTypes",
         "-XLambdaCase",
         "-XLiberalTypeSynonyms",
         "-XMagicHash",

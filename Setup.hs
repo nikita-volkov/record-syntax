@@ -2,7 +2,7 @@
 -- https://github.com/ekmett/lens/blob/697582fb9a980f273dbf8496253c5bbefedd0a8b/Setup.lhs
 import Data.List ( nub )
 import Data.Version ( showVersion )
-import Distribution.Package ( PackageName(PackageName), Package, PackageId, InstalledPackageId, packageVersion, packageName )
+import Distribution.Package ( PackageName(PackageName), Package, PackageId, UnitId, packageVersion, packageName )
 import Distribution.PackageDescription ( PackageDescription(), TestSuite(..) )
 import Distribution.Simple ( defaultMainWithHooks, UserHooks(..), simpleUserHooks )
 import Distribution.Simple.Utils ( rewriteFile, createDirectoryIfMissingVerbose, copyFiles )
@@ -37,6 +37,6 @@ generateBuildModule verbosity pkg lbi = do
     formatone p = case packageName p of
       PackageName n -> n ++ "-" ++ showVersion (packageVersion p)
 
-testDeps :: ComponentLocalBuildInfo -> ComponentLocalBuildInfo -> [(InstalledPackageId, PackageId)]
+testDeps :: ComponentLocalBuildInfo -> ComponentLocalBuildInfo -> [(UnitId, PackageId)]
 testDeps xs ys = nub $ componentPackageDeps xs ++ componentPackageDeps ys
 
